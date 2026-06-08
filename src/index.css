@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-700 text-gray-100 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-diamond {
+    @apply bg-gradient-to-r from-diamond-400 to-diamond-500 text-dark-700 font-semibold rounded-xl px-4 py-3
+    hover:from-diamond-300 hover:to-diamond-400 active:from-diamond-500 active:to-diamond-600
+    transition-all duration-150 shadow-lg shadow-diamond-500/30
+    disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-dark {
+    @apply bg-dark-50 text-gray-200 font-medium rounded-xl px-4 py-3
+    hover:bg-dark-100 active:bg-dark-200 transition-all duration-150
+    border border-dark-50 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply bg-red-900/50 text-red-300 font-medium rounded-xl px-4 py-3
+    hover:bg-red-900/70 active:bg-red-800/50 transition-all duration-150
+    border border-red-800/30;
+  }
+
+  .card {
+    @apply bg-dark-300 rounded-2xl border border-dark-50/50 p-4;
+  }
+
+  .input-field {
+    @apply w-full bg-dark-400 border border-dark-50/50 rounded-xl px-4 py-3
+    text-gray-100 placeholder-gray-500 focus:outline-none focus:border-diamond-500/50
+    focus:ring-1 focus:ring-diamond-500/30 transition-all duration-150;
+  }
+
+  .select-field {
+    @apply w-full bg-dark-400 border border-dark-50/50 rounded-xl px-4 py-3
+    text-gray-100 focus:outline-none focus:border-diamond-500/50
+    focus:ring-1 focus:ring-diamond-500/30 transition-all duration-150 appearance-none;
+  }
+
+  .tab-active {
+    @apply text-diamond-400 border-b-2 border-diamond-400;
+  }
+
+  .tab-inactive {
+    @apply text-gray-500 border-b-2 border-transparent hover:text-gray-300;
+  }
+
+  .glow-diamond {
+    @apply shadow-lg shadow-diamond-500/40;
+  }
+}
