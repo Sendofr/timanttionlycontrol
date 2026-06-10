@@ -6,7 +6,7 @@ export const SERVICES: { name: ServiceType; price: number }[] = [
   { name: 'Combo', price: 60000 },
   { name: 'Afeitado', price: 2500 },
   { name: 'Cejas', price: 10000 },
-  { name: 'Tratamiento', price: 10000 },
+  { name: 'Lavado', price: 10000 },
 ];
 
 export const PAYMENT_METHODS: PaymentMethod[] = [
